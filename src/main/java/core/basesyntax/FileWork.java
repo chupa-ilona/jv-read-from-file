@@ -1,7 +1,6 @@
 package core.basesyntax;
 
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.Arrays;
@@ -23,11 +22,8 @@ public class FileWork {
 
         String result = stringBuilder.toString().toLowerCase();
         String[] words = result.split("\\W+");
-
         return Arrays.stream(words)
                 .filter(word -> word.startsWith("w")).sorted().toArray(String[]::new);
-
-
     }
 }
 
